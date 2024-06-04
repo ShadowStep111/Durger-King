@@ -1,4 +1,5 @@
 // https://shadowstep111.github.io/Durger-King/
+const tg = window.Telegram.WebApp;
 
 const menu = [
     {
@@ -189,10 +190,14 @@ viewOrder.addEventListener("click", () => {
     payBtn.textContent = `Pay: ${summa.toFixed(2)}`;
     checkDiv.appendChild(payBtn);
 
+    payBtn.addEventListener("click", () => {
+        const data = JSON.stringify(check);
+        tg.sendData(data);
+    });
+
     menuDiv.classList.add("hide");
     viewOrder.classList.add("hide");
 });
-
 
 function getTotalAmount() {
     const items = menuDiv.querySelectorAll(".item");  //  => [div, div, div, div, ...]
