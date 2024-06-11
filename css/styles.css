@@ -86,10 +86,6 @@ body {
     border-radius: 4px;
 }
 
-.hide {
-    display: none;
-}
-
 .check {
     display: flex;
     flex-direction: column;
@@ -123,4 +119,8 @@ body {
     background-color: rgb(51, 222, 45);
     border: 2px;
     border-radius: 4px;
+}
+
+.hide {
+    display: none;
 }
