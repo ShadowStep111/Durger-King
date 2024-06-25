@@ -77,7 +77,7 @@ const menu = [
 
 const menuDiv = document.querySelector(".menu");
 const viewOrder = document.querySelector(".view-order");
-const checkDiv = document.querySelector(".check")
+const checkDiv = document.querySelector(".check");
 
 
 let index = 0;
@@ -164,7 +164,7 @@ viewOrder.addEventListener("click", () => {
         }
         index++
     }
-    console.log(check);
+
 
     let summa = 0;
     let check_index = 0;
@@ -181,7 +181,7 @@ viewOrder.addEventListener("click", () => {
             </div>
         `;
         checkDiv.appendChild(div);
-        summa += check[check_index].sum
+        summa += check[check_index].sum;
         check_index++;
     }
 
@@ -199,6 +199,7 @@ viewOrder.addEventListener("click", () => {
     viewOrder.classList.add("hide");
 });
 
+
 function getTotalAmount() {
     const items = menuDiv.querySelectorAll(".item");  //  => [div, div, div, div, ...]
     
@@ -210,8 +211,6 @@ function getTotalAmount() {
         totalAmount += amount;
         index++
     };
-   
-    console.log(totalAmount)
 
     return totalAmount;
 }
